@@ -56,14 +56,22 @@ class AutoInstagramPoster:
         """
     
     def generate_hastags(self):
-        available_hastags = [
+        available_hashtags = [
             "#funny", "#meme", "#memeoftheday", "#memeaday", "#funnypage", "#memepage",
             "#funnymemes", "#memes", "#funny", "#meme", "#dankmemes", "#memesdaily", "#lol", "#funnyvideos",
             "#comedy", "#dailymemes", "#follow", "#dank", "#offensivememes", "#edgymemes", "#memepage", "#lmao",
             "#fun", "#humor", "#memestagram", "#love", "#funnymeme", "#tiktok", "#instagram", "#like",
             "#dankmeme", "#jokes", "#explorepage", "#memer", "#instagood"
         ]
-        return " ".join(random.sample(available_hastags, 10))
+        top_hashtags = [
+            "#love","#instagood","#fashion","#photooftheday","#beautiful","#art","#photography","#happy",
+            "#picoftheday","#cute","#follow","#tbt","#followme","#nature","#like4like","#travel","#instagram",
+            "#style","#repost","#summer454","#selfie","#instadaily","#friends","#me","#girl","#fitness",
+            "#fun","#food","#instalike","#beauty","#family","#smile","#life","#photo","#music",
+            "#likeforlike","#follow4follow","#ootd","#amazing","#makeup","#nofilter","#igers",
+            "#model","#dog","#beach","#sunset","#foodporn","#instamood","#followforfollow","#motivation"
+        ]
+        return " ".join(random.sample(available_hashtags, 10)) + " " + " ".join(random.sample(top_hashtags, 10))
     
     def generate_credits(self, meme_data):
         return f"Credit to : {meme_data['author']} (Reddit)"
